@@ -15,7 +15,6 @@ namespace projekt_pp
 	public partial class MainWindow : Form
 	{
 		private bool isLogged;
-        private char permission;
         private int userID;
 		public MainWindow()
 		{
@@ -60,7 +59,6 @@ namespace projekt_pp
 
 		public void InitializeComponentAdmin(int id)
 		{
-            permission = 'A';
             userID = id;
 			this.panelM.Visible = true;
 			this.profilLabel.Visible = true;
@@ -69,7 +67,6 @@ namespace projekt_pp
 
 		public void InitializeComponentTeacher(int id)
 		{
-            permission = 'O';
             userID = id;
             this.panelO.Visible = true;
 			this.profilLabel.Visible = true;
@@ -78,7 +75,6 @@ namespace projekt_pp
 
 		public void InitializeComponentStudent(int id)
 		{
-            permission = 'K';
             userID = id;
             this.panelK.Visible = true;
 			this.profilLabel.Visible = true;
@@ -106,7 +102,7 @@ namespace projekt_pp
 
 		private void profilLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			ProfilWindow obj = new ProfilWindow();
+			ProfilWindow obj = new ProfilWindow(this, userID);
 			obj.Show();
 		}
 

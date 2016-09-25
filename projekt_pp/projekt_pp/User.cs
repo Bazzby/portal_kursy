@@ -272,5 +272,29 @@ namespace projekt_pp
 
             return finalName;
         }
+
+        public static void ChangeUserPassword(int id, string password)
+        {
+            var connectionString = Functions.GetConnectionString();
+
+            try
+            {
+                var connection = new MySql.Data.MySqlClient.MySqlConnection { ConnectionString = connectionString };
+                connection.Open();
+
+                string query = "UPDATE projekt_pp.uzytkownik " +
+                               "SET haslo = \"" + password + "\" WHERE id = " + id;
+
+                var command = new MySqlCommand(query, connection);
+                command.ExecuteReader();
+                MessageBox.Show("Poprawnie zmieniono hasło");
+                connection.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw ex;
+            }
+        }
     }
 }
