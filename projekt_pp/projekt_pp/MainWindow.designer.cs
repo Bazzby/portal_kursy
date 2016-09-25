@@ -1,4 +1,4 @@
-﻿namespace Portal
+﻿namespace projekt_pp
 {
     partial class MainWindow
     {
@@ -47,10 +47,17 @@
             this.addButtonMKierowcy = new System.Windows.Forms.Button();
             this.deleteButtonMKierowcy = new System.Windows.Forms.Button();
             this.tableDriversM = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.mZlecenia = new System.Windows.Forms.TabPage();
             this.addButtonMZlecenia = new System.Windows.Forms.Button();
             this.deleteButtonMZlecenia = new System.Windows.Forms.Button();
             this.mTabelaZlecenia = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewLinkColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelO = new System.Windows.Forms.Panel();
             this.tableControlO = new System.Windows.Forms.TabControl();
             this.oPojazdy = new System.Windows.Forms.TabPage();
@@ -68,27 +75,20 @@
             this.dataGridViewButtonColumn7 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewLinkColumn6 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewLinkColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.nrKursuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subjectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.membersDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.klasaTestowakursBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.klasaTestowateacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.klasaTestowauserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelM.SuspendLayout();
@@ -197,6 +197,7 @@
             this.addButtonMPojazdy.TabIndex = 3;
             this.addButtonMPojazdy.Text = "Dodaj";
             this.addButtonMPojazdy.UseVisualStyleBackColor = true;
+            this.addButtonMPojazdy.Click += new System.EventHandler(this.addButtonMPojazdy_Click);
             // 
             // tableCarsM
             // 
@@ -216,6 +217,7 @@
             this.tableCarsM.Name = "tableCarsM";
             this.tableCarsM.Size = new System.Drawing.Size(745, 341);
             this.tableCarsM.TabIndex = 0;
+            this.tableCarsM.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableCarsM_CellContentClick);
             // 
             // Column6
             // 
@@ -268,6 +270,7 @@
             this.addButtonMKierowcy.TabIndex = 5;
             this.addButtonMKierowcy.Text = "Dodaj";
             this.addButtonMKierowcy.UseVisualStyleBackColor = true;
+            this.addButtonMKierowcy.Click += new System.EventHandler(this.addButtonMKierowcy_Click);
             // 
             // deleteButtonMKierowcy
             // 
@@ -297,6 +300,34 @@
             this.tableDriversM.Name = "tableDriversM";
             this.tableDriversM.Size = new System.Drawing.Size(747, 341);
             this.tableDriversM.TabIndex = 1;
+            this.tableDriversM.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableDriversM_CellContentClick);
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Zaznacz kierowce";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Mail";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mail";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Szczegóły";
+            this.Column2.Name = "Column2";
+            this.Column2.Text = "Szczegóły";
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.DataPropertyName = "EditButton";
+            this.dataGridViewButtonColumn1.HeaderText = "Edycja";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.ReadOnly = true;
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewButtonColumn1.Text = "Edytuj";
             // 
             // mZlecenia
             // 
@@ -319,6 +350,7 @@
             this.addButtonMZlecenia.TabIndex = 5;
             this.addButtonMZlecenia.Text = "Dodaj";
             this.addButtonMZlecenia.UseVisualStyleBackColor = true;
+            this.addButtonMZlecenia.Click += new System.EventHandler(this.addButtonMZlecenia_Click);
             // 
             // deleteButtonMZlecenia
             // 
@@ -348,6 +380,30 @@
             this.mTabelaZlecenia.Name = "mTabelaZlecenia";
             this.mTabelaZlecenia.Size = new System.Drawing.Size(744, 341);
             this.mTabelaZlecenia.TabIndex = 1;
+            this.mTabelaZlecenia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mTabelaZlecenia_CellContentClick);
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.HeaderText = "Zaznacz zlecenie";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewLinkColumn2
+            // 
+            this.dataGridViewLinkColumn2.DataPropertyName = "ShowCalendar";
+            this.dataGridViewLinkColumn2.HeaderText = "Szczegóły";
+            this.dataGridViewLinkColumn2.Name = "dataGridViewLinkColumn2";
+            this.dataGridViewLinkColumn2.ReadOnly = true;
+            this.dataGridViewLinkColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            this.dataGridViewButtonColumn2.DataPropertyName = "EditButton";
+            this.dataGridViewButtonColumn2.HeaderText = "Edycja";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.ReadOnly = true;
+            this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewButtonColumn2.Text = "Edytuj";
             // 
             // panelO
             // 
@@ -500,29 +556,6 @@
             this.Column3.HeaderText = "Rezerwuj";
             this.Column3.Name = "Column3";
             // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.HeaderText = "Zaznacz zlecenie";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            this.dataGridViewCheckBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewLinkColumn2
-            // 
-            this.dataGridViewLinkColumn2.DataPropertyName = "ShowCalendar";
-            this.dataGridViewLinkColumn2.HeaderText = "Szczegóły";
-            this.dataGridViewLinkColumn2.Name = "dataGridViewLinkColumn2";
-            this.dataGridViewLinkColumn2.ReadOnly = true;
-            this.dataGridViewLinkColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewButtonColumn2
-            // 
-            this.dataGridViewButtonColumn2.DataPropertyName = "EditButton";
-            this.dataGridViewButtonColumn2.HeaderText = "Edycja";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.ReadOnly = true;
-            this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewButtonColumn2.Text = "Edytuj";
-            // 
             // nrKursuDataGridViewTextBoxColumn1
             // 
             this.nrKursuDataGridViewTextBoxColumn1.DataPropertyName = "NrKursu";
@@ -549,11 +582,29 @@
             // 
             // klasaTestowakursBindingSource
             // 
-            this.klasaTestowakursBindingSource.DataSource = typeof(Portal.KlasaTestowa_kurs);
+            this.klasaTestowakursBindingSource.DataSource = typeof(projekt_pp.KlasaTestowa_kurs);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Nr kierowcy";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Imię";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nazwisko";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
             // 
             // klasaTestowateacherBindingSource
             // 
-            this.klasaTestowateacherBindingSource.DataSource = typeof(Portal.KlasaTestowa_teacher);
+            this.klasaTestowateacherBindingSource.DataSource = typeof(projekt_pp.KlasaTestowa_teacher);
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -581,52 +632,7 @@
             // 
             // klasaTestowauserBindingSource
             // 
-            this.klasaTestowauserBindingSource.DataSource = typeof(Portal.KlasaTestowa_user);
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Zaznacz kierowce";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Nr kierowcy";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Imię";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nazwisko";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Mail";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mail";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Szczegóły";
-            this.Column2.Name = "Column2";
-            this.Column2.Text = "Szczegóły";
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            this.dataGridViewButtonColumn1.DataPropertyName = "EditButton";
-            this.dataGridViewButtonColumn1.HeaderText = "Edycja";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.ReadOnly = true;
-            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewButtonColumn1.Text = "Edytuj";
+            this.klasaTestowauserBindingSource.DataSource = typeof(projekt_pp.KlasaTestowa_user);
             // 
             // MainWindow
             // 
@@ -638,7 +644,7 @@
             this.Controls.Add(this.panelO);
             this.Controls.Add(this.panelS);
             this.Name = "MainWindow";
-            this.Text = "Menedżer Floty";
+            this.Text = "Platforma z kursami edukacyjnymi";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panelS.ResumeLayout(false);
             this.panelS.PerformLayout();

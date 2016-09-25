@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace Portal
+namespace projekt_pp
 {
     //Okienko odpowiedzialne za logowanie
     public partial class LoginWindow : Form

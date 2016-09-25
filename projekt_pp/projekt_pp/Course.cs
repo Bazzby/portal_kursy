@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace Portal
+namespace projekt_pp
 {
     class Course
     {
@@ -112,15 +112,7 @@ namespace Portal
                 var connection = new MySql.Data.MySqlClient.MySqlConnection { ConnectionString = connectionString };
                 connection.Open();
 
-                string query = "INSERT INTO projekt_pp.kurs VALUES(null, " +
-                                courseDto.IdTeacher +
-                                 "," +
-                                courseDto.StudentsNumber +
-                                ",\"" +
-                                courseDto.Topic +
-                                "\",\"" +
-                                courseDto.Password +
-                                "\");";
+                string query = "INSERT INTO projekt_pp.kurs VALUES(null, " + courseDto.IdTeacher + "," + courseDto.StudentsNumber + ",\"" +  courseDto.Topic + "\",\"" + courseDto.Password + "\");";
 
                 var command = new MySqlCommand(query, connection);
                 command.ExecuteReader();

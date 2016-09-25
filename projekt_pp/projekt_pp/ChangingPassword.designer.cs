@@ -1,4 +1,4 @@
-﻿namespace Portal
+﻿namespace projekt_pp
 {
     partial class ChangingPassword
     {

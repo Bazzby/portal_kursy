@@ -50,6 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOrEditCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrEditCourse.Designer.cs">
+      <DependentUpon>AddOrEditCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrEditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrEditStudent.Designer.cs">
+      <DependentUpon>AddOrEditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrEditTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrEditTeacher.Designer.cs">
+      <DependentUpon>AddOrEditTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Address.cs" />
     <Compile Include="ChangingPassword.cs">
       <SubType>Form</SubType>
@@ -100,6 +118,15 @@
     <Compile Include="User.cs" />
     <Compile Include="UserData.cs" />
     <Compile Include="UserDto.cs" />
+    <EmbeddedResource Include="AddOrEditCourse.resx">
+      <DependentUpon>AddOrEditCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrEditStudent.resx">
+      <DependentUpon>AddOrEditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrEditTeacher.resx">
+      <DependentUpon>AddOrEditTeacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangingPassword.resx">
       <DependentUpon>ChangingPassword.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Portal
+namespace projekt_pp
 {
 
 	//Okienko główne
@@ -43,7 +43,7 @@ namespace Portal
             var courseList = Course.GetCourseList();
             foreach (var course in courseList)
             {
-                User user = User.GetUserById(course.idTeacher);
+                User user = User.GetUserById((int)course.idTeacher);
                 string teacher = user.lastName + " " + user.name;
                 klasaTestowakursBindingSource.Add(new KlasaTestowa_kurs(course.id, course.topic, course.studentsNumber, teacher));
             }
@@ -187,13 +187,13 @@ namespace Portal
             try
             {
                 Course.AddCourse(courseDto);
-                klasaTestowauserBindingSource.Clear();
+                klasaTestowakursBindingSource.Clear();
                 var list = Course.GetCourseList();
-                User user = User.GetUserById(courseDto.IdTeacher);
-                string teacher = user.lastName + " " + user.name;
                 foreach (var course in list)
                 {
-                    klasaTestowauserBindingSource.Add(new KlasaTestowa_kurs(course.id, course.topic, course.studentsNumber, teacher));
+                    User user = User.GetUserById(course.idTeacher);
+                    string teacher = user.lastName + " " + user.name;
+                    klasaTestowakursBindingSource.Add(new KlasaTestowa_kurs(course.id, course.topic, course.studentsNumber, teacher));
                 }
 
             }
@@ -207,13 +207,13 @@ namespace Portal
         {
             try
             {
-                klasaTestowauserBindingSource.Clear();
+                klasaTestowakursBindingSource.Clear();
                 var list = Course.GetCourseList();
-                User user = User.GetUserById(courseDto.IdTeacher);
-                string teacher = user.lastName + " " + user.name;
                 foreach (var course in list)
                 {
-                    klasaTestowauserBindingSource.Add(new KlasaTestowa_kurs(course.id, course.topic, course.studentsNumber, teacher));
+                    User user = User.GetUserById(course.idTeacher);
+                    string teacher = user.lastName + " " + user.name;
+                    klasaTestowakursBindingSource.Add(new KlasaTestowa_kurs(course.id, course.topic, course.studentsNumber, teacher));
                 }
 
             }
@@ -221,6 +221,85 @@ namespace Portal
             {
                 throw ex;
             }
+        }
+
+        private void addButtonMPojazdy_Click(object sender, EventArgs e)
+        {
+            var obj = new AddOrEditCourse(this);
+            obj.Text = "Platforma edukacyjna - Dodaj kurs";
+            obj.button2.Visible = false;
+            obj.Show();
+        }
+
+        private void EditCourse(int courseId)
+        {
+            var obj = new AddOrEditCourse(this, courseId);
+            obj.Text = "Platforma edukacyjna - Edytuj kurs";
+            obj.button1.Visible = false;
+            obj.Show();
+        }
+
+        private void tableCarsM_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+             if (e.ColumnIndex == 6)
+            {
+                var row = e.RowIndex;
+                var courseId = (int)tableCarsM.Rows[row].Cells[1].Value;
+                EditCourse(courseId);
+            }
+        }
+
+        private void tableDriversM_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 6)
+            {
+                var row = e.RowIndex;
+                var userId = (int)tableDriversM.Rows[row].Cells[1].Value;
+                EditTeacher(userId);
+            }
+        }
+
+        private void addButtonMKierowcy_Click(object sender, EventArgs e)
+        {
+
+            var obj = new AddOrEditTeacher(this);
+            obj.Text = "Platforma edukacyjna - Dodaj nauczyciela";
+            obj.button2.Visible = false;
+            obj.Show();
+        }
+
+        private void EditTeacher(int userId)
+        {
+            var obj = new AddOrEditTeacher(this, userId);
+            obj.Text = "Platforma edukacyjna - Edytuj nauczyciela";
+            obj.button1.Visible = false;
+            obj.Show();
+        }
+
+        private void mTabelaZlecenia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 6)
+            {
+                var row = e.RowIndex;
+                var userId = (int)mTabelaZlecenia.Rows[row].Cells[1].Value;
+                EditStudent(userId);
+            }
+        }
+
+        private void addButtonMZlecenia_Click(object sender, EventArgs e)
+        {
+            var obj = new AddOrEditStudent(this);
+            obj.Text = "Platforma edukacyjna - Dodaj studenta";
+            obj.button2.Visible = false;
+            obj.Show();
+        }
+
+        private void EditStudent(int userId)
+        {
+            var obj = new AddOrEditStudent(this, userId);
+            obj.Text = "Platforma edukacyjna - Edytuj studenta";
+            obj.button1.Visible = false;
+            obj.Show();
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace Portal
+namespace projekt_pp
 {
     class User
     {
@@ -204,6 +204,73 @@ namespace Portal
                 MessageBox.Show(ex.Message);
             }
             return list;
+        }
+
+        public static int GetUserIdByName(string name, string lastName)
+        {
+            var connectionString = Functions.GetConnectionString();
+            int id = 0;
+
+            try
+            {
+                var connection = new MySql.Data.MySqlClient.MySqlConnection { ConnectionString = connectionString };
+                connection.Open();
+
+                string query = "SELECT id FROM projekt_pp.uzytkownik where uzytkownik.imie = \"" + name + "\" AND uzytkownik.nazwisko = \"" + lastName + "\"";
+                var command = new MySqlCommand(query, connection);
+                var dataReader = command.ExecuteReader();
+
+                if (dataReader.Read())
+                {
+                    id = dataReader.GetInt32(0);
+                    connection.Close();
+                    return id;
+                }
+                else
+                {
+                    connection.Close();
+                    return id;
+                }
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return id;
+        }
+
+        public static string GetUserNameById(int id)
+        {
+            var connectionString = Functions.GetConnectionString();
+            string finalName = "";
+
+            try
+            {
+                var connection = new MySql.Data.MySqlClient.MySqlConnection { ConnectionString = connectionString };
+                connection.Open();
+
+                string query = "SELECT nazwisko, imie FROM projekt_pp.uzytkownik where uzytkownik.id = " + id;
+                var command = new MySqlCommand(query, connection);
+                var dataReader = command.ExecuteReader();
+
+                if (dataReader.Read())
+                {
+                    finalName = dataReader.GetString(0) + " " + dataReader.GetString(1);
+                    connection.Close();
+                    return finalName;
+                }
+                else
+                {
+                    connection.Close();
+                    return finalName;
+                }
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return finalName;
         }
     }
 }
