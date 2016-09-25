@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `dziennik_ocen`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dziennik_ocen` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_uczestnik` int(11) NOT NULL,
   `ocena` int(11) NOT NULL,
   `opis` varchar(45) DEFAULT NULL,
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-23 14:38:04
+-- Dump completed on 2016-09-25 19:03:56

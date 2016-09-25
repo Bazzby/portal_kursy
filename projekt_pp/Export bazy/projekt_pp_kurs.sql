@@ -23,13 +23,13 @@ DROP TABLE IF EXISTS `kurs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `kurs` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_nauczyciel` int(11) NOT NULL,
   `liczba_miejsc` int(11) NOT NULL,
   `temat` varchar(45) NOT NULL,
   `hasło` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `kurs` (
 
 LOCK TABLES `kurs` WRITE;
 /*!40000 ALTER TABLE `kurs` DISABLE KEYS */;
+INSERT INTO `kurs` VALUES (1,4,35,'Projekt programistyczny','Test123'),(2,3,25,'Grafika komputerowa','Test123'),(3,0,10,'DSO','Mamut'),(4,0,50,'SMIW','Smiw'),(5,0,24,'JA','gaga'),(6,0,55,'GK','kkakdj'),(7,3,45,'BIAI','dfsgdfg'),(8,4,55,'PSR','asdsa');
 /*!40000 ALTER TABLE `kurs` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-23 14:38:05
+-- Dump completed on 2016-09-25 19:03:56
