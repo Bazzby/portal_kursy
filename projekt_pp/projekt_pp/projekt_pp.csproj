@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="KlasaTestowa_kurs.cs" />
+    <Compile Include="KlasaTestowa_kurs_nazwy.cs" />
     <Compile Include="KlasaTestowa_teacher.cs" />
     <Compile Include="KlasaTestowa_user.cs" />
     <Compile Include="LoginWindow.cs">
@@ -152,6 +153,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\KlasaTestowa_kurs.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -40,24 +40,38 @@
             this.addButtonMPojazdy = new System.Windows.Forms.Button();
             this.tableCarsM = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nrKursuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.membersDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.klasaTestowakursBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deleteButtonMPojazdy = new System.Windows.Forms.Button();
             this.mKierowcy = new System.Windows.Forms.TabPage();
             this.addButtonMKierowcy = new System.Windows.Forms.Button();
             this.deleteButtonMKierowcy = new System.Windows.Forms.Button();
             this.tableDriversM = new System.Windows.Forms.DataGridView();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.klasaTestowateacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mZlecenia = new System.Windows.Forms.TabPage();
             this.addButtonMZlecenia = new System.Windows.Forms.Button();
             this.deleteButtonMZlecenia = new System.Windows.Forms.Button();
             this.mTabelaZlecenia = new System.Windows.Forms.DataGridView();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewLinkColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.klasaTestowauserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelO = new System.Windows.Forms.Panel();
             this.tableControlO = new System.Windows.Forms.TabControl();
             this.oPojazdy = new System.Windows.Forms.TabPage();
@@ -75,30 +89,20 @@
             this.dataGridViewButtonColumn7 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewLinkColumn6 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.nrKursuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.membersDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.klasaTestowakursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.klasaTestowateacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.klasaTestowauserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.klasaTestowakursBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panelS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelM.SuspendLayout();
             this.tableControlM.SuspendLayout();
             this.mPojazdy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableCarsM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowakursBindingSource)).BeginInit();
             this.mKierowcy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableDriversM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowateacherBindingSource)).BeginInit();
             this.mZlecenia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mTabelaZlecenia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowauserBindingSource)).BeginInit();
             this.panelO.SuspendLayout();
             this.tableControlO.SuspendLayout();
             this.oPojazdy.SuspendLayout();
@@ -109,9 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kTabelaZlecenia)).BeginInit();
             this.tabKPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kTabelaRezerwacje)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowakursBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowateacherBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowauserBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowakursBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelS
@@ -225,6 +227,30 @@
             this.Column6.Name = "Column6";
             this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // nrKursuDataGridViewTextBoxColumn1
+            // 
+            this.nrKursuDataGridViewTextBoxColumn1.DataPropertyName = "NrKursu";
+            this.nrKursuDataGridViewTextBoxColumn1.HeaderText = "Nr kursu";
+            this.nrKursuDataGridViewTextBoxColumn1.Name = "nrKursuDataGridViewTextBoxColumn1";
+            // 
+            // subjectDataGridViewTextBoxColumn1
+            // 
+            this.subjectDataGridViewTextBoxColumn1.DataPropertyName = "Subject";
+            this.subjectDataGridViewTextBoxColumn1.HeaderText = "Temat";
+            this.subjectDataGridViewTextBoxColumn1.Name = "subjectDataGridViewTextBoxColumn1";
+            // 
+            // membersDataGridViewTextBoxColumn1
+            // 
+            this.membersDataGridViewTextBoxColumn1.DataPropertyName = "Members";
+            this.membersDataGridViewTextBoxColumn1.HeaderText = "Uczestnicy";
+            this.membersDataGridViewTextBoxColumn1.Name = "membersDataGridViewTextBoxColumn1";
+            // 
+            // teacherDataGridViewTextBoxColumn1
+            // 
+            this.teacherDataGridViewTextBoxColumn1.DataPropertyName = "Teacher";
+            this.teacherDataGridViewTextBoxColumn1.HeaderText = "Prowadzący";
+            this.teacherDataGridViewTextBoxColumn1.Name = "teacherDataGridViewTextBoxColumn1";
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "Szczegóły";
@@ -238,6 +264,10 @@
             this.Edit.ReadOnly = true;
             this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Edit.Text = "Edytuj";
+            // 
+            // klasaTestowakursBindingSource
+            // 
+            this.klasaTestowakursBindingSource.DataSource = typeof(projekt_pp.KlasaTestowa_kurs);
             // 
             // deleteButtonMPojazdy
             // 
@@ -308,6 +338,24 @@
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Nr kierowcy";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Imię";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nazwisko";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Mail";
@@ -328,6 +376,10 @@
             this.dataGridViewButtonColumn1.ReadOnly = true;
             this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewButtonColumn1.Text = "Edytuj";
+            // 
+            // klasaTestowateacherBindingSource
+            // 
+            this.klasaTestowateacherBindingSource.DataSource = typeof(projekt_pp.KlasaTestowa_teacher);
             // 
             // mZlecenia
             // 
@@ -388,6 +440,30 @@
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             this.dataGridViewCheckBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Nr uczestnika";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Imię";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
+            // lastNameDataGridViewTextBoxColumn1
+            // 
+            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Nazwisko";
+            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
+            // 
+            // mailDataGridViewTextBoxColumn
+            // 
+            this.mailDataGridViewTextBoxColumn.DataPropertyName = "Mail";
+            this.mailDataGridViewTextBoxColumn.HeaderText = "Mail";
+            this.mailDataGridViewTextBoxColumn.Name = "mailDataGridViewTextBoxColumn";
+            // 
             // dataGridViewLinkColumn2
             // 
             this.dataGridViewLinkColumn2.DataPropertyName = "ShowCalendar";
@@ -404,6 +480,10 @@
             this.dataGridViewButtonColumn2.ReadOnly = true;
             this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewButtonColumn2.Text = "Edytuj";
+            // 
+            // klasaTestowauserBindingSource
+            // 
+            this.klasaTestowauserBindingSource.DataSource = typeof(projekt_pp.KlasaTestowa_user);
             // 
             // panelO
             // 
@@ -492,6 +572,7 @@
             this.kTabelaZlecenia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kTabelaZlecenia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewLinkColumn5});
+            this.kTabelaZlecenia.DataSource = klasaTestowakursBindingSource2;
             this.kTabelaZlecenia.Location = new System.Drawing.Point(6, 7);
             this.kTabelaZlecenia.Name = "kTabelaZlecenia";
             this.kTabelaZlecenia.Size = new System.Drawing.Size(839, 341);
@@ -556,83 +637,9 @@
             this.Column3.HeaderText = "Rezerwuj";
             this.Column3.Name = "Column3";
             // 
-            // nrKursuDataGridViewTextBoxColumn1
+            // klasaTestowakursBindingSource2
             // 
-            this.nrKursuDataGridViewTextBoxColumn1.DataPropertyName = "NrKursu";
-            this.nrKursuDataGridViewTextBoxColumn1.HeaderText = "Nr kursu";
-            this.nrKursuDataGridViewTextBoxColumn1.Name = "nrKursuDataGridViewTextBoxColumn1";
-            // 
-            // subjectDataGridViewTextBoxColumn1
-            // 
-            this.subjectDataGridViewTextBoxColumn1.DataPropertyName = "Subject";
-            this.subjectDataGridViewTextBoxColumn1.HeaderText = "Temat";
-            this.subjectDataGridViewTextBoxColumn1.Name = "subjectDataGridViewTextBoxColumn1";
-            // 
-            // membersDataGridViewTextBoxColumn1
-            // 
-            this.membersDataGridViewTextBoxColumn1.DataPropertyName = "Members";
-            this.membersDataGridViewTextBoxColumn1.HeaderText = "Uczestnicy";
-            this.membersDataGridViewTextBoxColumn1.Name = "membersDataGridViewTextBoxColumn1";
-            // 
-            // teacherDataGridViewTextBoxColumn1
-            // 
-            this.teacherDataGridViewTextBoxColumn1.DataPropertyName = "Teacher";
-            this.teacherDataGridViewTextBoxColumn1.HeaderText = "Prowadzący";
-            this.teacherDataGridViewTextBoxColumn1.Name = "teacherDataGridViewTextBoxColumn1";
-            // 
-            // klasaTestowakursBindingSource
-            // 
-            this.klasaTestowakursBindingSource.DataSource = typeof(projekt_pp.KlasaTestowa_kurs);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Nr kierowcy";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Imię";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nazwisko";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // klasaTestowateacherBindingSource
-            // 
-            this.klasaTestowateacherBindingSource.DataSource = typeof(projekt_pp.KlasaTestowa_teacher);
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Nr uczestnika";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Imię";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            // 
-            // lastNameDataGridViewTextBoxColumn1
-            // 
-            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Nazwisko";
-            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
-            // 
-            // mailDataGridViewTextBoxColumn
-            // 
-            this.mailDataGridViewTextBoxColumn.DataPropertyName = "Mail";
-            this.mailDataGridViewTextBoxColumn.HeaderText = "Mail";
-            this.mailDataGridViewTextBoxColumn.Name = "mailDataGridViewTextBoxColumn";
-            // 
-            // klasaTestowauserBindingSource
-            // 
-            this.klasaTestowauserBindingSource.DataSource = typeof(projekt_pp.KlasaTestowa_user);
+            this.klasaTestowakursBindingSource2.DataSource = typeof(projekt_pp.KlasaTestowa_kurs_nazwy);
             // 
             // MainWindow
             // 
@@ -653,10 +660,13 @@
             this.tableControlM.ResumeLayout(false);
             this.mPojazdy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableCarsM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowakursBindingSource)).EndInit();
             this.mKierowcy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableDriversM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowateacherBindingSource)).EndInit();
             this.mZlecenia.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mTabelaZlecenia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowauserBindingSource)).EndInit();
             this.panelO.ResumeLayout(false);
             this.tableControlO.ResumeLayout(false);
             this.oPojazdy.ResumeLayout(false);
@@ -667,9 +677,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kTabelaZlecenia)).EndInit();
             this.tabKPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kTabelaRezerwacje)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowakursBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowateacherBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowauserBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klasaTestowakursBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -780,5 +788,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewButtonColumn Column2;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource klasaTestowakursBindingSource2;
     }
 }

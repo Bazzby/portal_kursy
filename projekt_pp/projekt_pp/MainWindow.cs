@@ -31,6 +31,7 @@ namespace projekt_pp
             foreach (var user in studentList)
             {
                 klasaTestowauserBindingSource.Add(new KlasaTestowa_user(user.id, user.name, user.lastName, user.mail));
+            
             }
 
             studentList = User.GetUserList('N');
@@ -45,7 +46,11 @@ namespace projekt_pp
                 User user = User.GetUserById((int)course.idTeacher);
                 string teacher = user.lastName + " " + user.name;
                 klasaTestowakursBindingSource.Add(new KlasaTestowa_kurs(course.id, course.topic, course.studentsNumber, teacher));
+            
             }
+         
+
+
         }
 
         private void InitializeComponentStart()
@@ -79,6 +84,15 @@ namespace projekt_pp
             this.panelK.Visible = true;
 			this.profilLabel.Visible = true;
 			this.logowanieLabel.Text = "Wyloguj";
+
+            var courseList = Course.GetUserCourseList(id);
+            foreach (var course in courseList)
+            {
+                User user = User.GetUserById((int)course.idTeacher);
+                string teacher = user.lastName + " " + user.name;
+                klasaTestowakursBindingSource2.Add(new KlasaTestowa_kurs_nazwy(course.id, course.topic));
+
+            }
         }
 
 		private void zalogujSLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

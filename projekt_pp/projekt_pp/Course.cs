@@ -28,7 +28,38 @@ namespace projekt_pp
         {
 
         }
+        public static IList<Course> GetUserCourseList(int id)
+        {
+            var connectionString = Functions.GetConnectionString();
+            var list = new List<Course>();
+            var courseDto = new CourseDto();
 
+            try
+            {
+                var connection = new MySql.Data.MySqlClient.MySqlConnection { ConnectionString = connectionString };
+                connection.Open();
+
+                string query = "SELECT        kurs.temat, kurs.id FROM kurs INNER JOIN uczestnik ON kurs.id = uczestnik.id_kurs INNER JOIN uzytkownik ON uczestnik.id_uzytkownik = uzytkownik.id WHERE(uczestnik.id_uzytkownik = "+id+"); ";
+                var command = new MySqlCommand(query, connection);
+                var dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+
+                    courseDto.Topic = dataReader.GetString(0);
+                    courseDto.Id = dataReader.GetInt32(1);
+
+                    var course = new Course(courseDto);
+                    list.Add(course);
+                }
+                connection.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return list;
+        }
         public static IList<Course> GetCourseList()
         {
             var connectionString = Functions.GetConnectionString();
